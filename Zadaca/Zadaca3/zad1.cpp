@@ -9,9 +9,8 @@ using namespace std;
 // Prostorna kompleksnost ovog algoritma je O(n) jer je implementiran in-place
 
 void quickSort(vector<int> &list, int s, int e) {
-    if (s >= e) {
+    if (s >= e)
         return;
-    }
 
     int pIndex = s + (e - s) / 2;
     int pivot = list.at(pIndex);
