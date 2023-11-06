@@ -4,7 +4,7 @@
 using namespace std;
 using listType = int;
 
-int binarySearch(vector<listType> list, listType n) {
+int binarySearch(vector<listType> &list, listType n) {
     int l = 0;
     int r = (int)list.size() - 1;
 

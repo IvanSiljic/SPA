@@ -21,7 +21,7 @@ public:
     }
 };
 
-Matrix matPow(Matrix A, int n, int i) {
+Matrix matPow(Matrix &A, int n, int i) {
     if (n == 0) {
         Matrix R;
         R.list[0][1] = 0;

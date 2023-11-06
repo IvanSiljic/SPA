@@ -4,7 +4,7 @@
 using namespace std;
 using listType = int;
 
-int findMax(vector<listType> list, int n) {
+int findMax(vector<listType> &list, int n) {
     if (n <= 0 || n >= list.size() - 1)
         return -1;
 
