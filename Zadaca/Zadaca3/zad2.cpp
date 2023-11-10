@@ -21,7 +21,7 @@ public:
     }
 };
 
-Matrix matPow(Matrix &A, int n, int i) {
+Matrix matPow(int n, int i) {
     if (n == 0) {
         Matrix R;
         R.list[0][1] = 0;
@@ -30,12 +30,12 @@ Matrix matPow(Matrix &A, int n, int i) {
         return R;
     } else if (n%2 == 0) {
         Matrix A, B;
-        B = matPow(A, n/2, ++i);
+        B = matPow(n/2, ++i);
         B*=B;
         return B;
     } else {
         Matrix A, B;
-        B = matPow(A, (n-1)/2, ++i);
+        B = matPow((n-1)/2, ++i);
         B *= B;
         B *= A;
         return B;
@@ -44,7 +44,7 @@ Matrix matPow(Matrix &A, int n, int i) {
 
 long long fib(int n) {
     Matrix A;
-    return matPow(A, n, 0).list[0][1];
+    return matPow(n, 0).list[0][1];
 }
 
 int main() {
